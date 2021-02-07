@@ -378,9 +378,39 @@ var nameAndSubjectSearch = $("a:contains('Name and subject search')");
     // MR - Login
     // Add login dropdown
     $('#moresearches').append(
-        //'<a href="/Shibboleth.sso/Login?target=https://ccp.koha-ptfs.co.uk/cgi-bin/koha/opac-main.pl" id="login_button_mr" class="helpBtn">Login</a>' // shib login
+        //'<a href="/Shibboleth.sso/Login?target=https://ccp.koha-ptfs.co.uk/cgi-bin/koha/opac-main.pl" id="login_button_mr" class="helpBtn">Login</a>' 		// shib login
         '<a href="/cgi-bin/koha/opac-user.pl" id="login_button_mr" class="helpBtn">Login</a>' // native login
     );
+    
+    // change content of auth modal
+    $('#modalAuth').html('<div class="modal-body"><h2>College student?</h2><h3><a href="/Shibboleth.sso/Login?target=https://ccp.koha-ptfs.co.uk' + window.location.pathname + '">Go to College login &raquo;</a></h3><h2>Staff or associate?</h2><h3><a href="/cgi-bin/koha/opac-user.pl">Go to local Koha login &raquo;</a></h3></div>');
+    
+    // opac-user remove h2, h3, h4, p in opac-auth area
+    $('#opac-auth > h2').remove();
+    $('#opac-auth > h3').remove();
+    $('#opac-auth > h4').remove();
+    $('#opac-auth > p').remove();    
+    
+    // change contents of opac-usr page
+    $('#auth').html('<h1>Log in to The Library</h1><h2>College student?</h2><h3><a href="/Shibboleth.sso/Login?target=https://ccp.koha-ptfs.co.uk' + window.location.pathname + '">Go to College login &raquo;</a></h3><h2>Staff or associate?</h2><h3><a href="#" id="authShowLnk">Click here to show login &raquo;</a></h3><div id="authBox" style="display:none"><input type="hidden" name="koha_login_context" value="opac"><fieldset class="brief"><label for="userid">Login</label><input type="text" size="25" id="userid" name="userid"><label for="password">Password</label><input type="password" size="25" id="password" name="password"></fieldset><input type="submit" value="Log in" class="btn"><div><strong>New to the Library catalogue?</strong><br />You will need a Library PIN to access our services. Please email <a href="mailto:library&#64;cityplym&#46;ac&#46;uk">library@cityplym.ac.uk</a> and we\'ll get that sorted for you.</div></div>');
+    
+    // change authLink fucntions
+    $('#authShowLnk').click( function( event ) {
+    	event.preventDefault();
+      	if($('#authBox').css('display') == 'none') {
+          $('#authBox').css('display', 'inline-block');
+          $('#authShowLnk').html('Click here to hide login &laquo;');
+        } else if($('#authBox').css('display') == 'inline-block') {
+          $('#authBox').css('display', 'none');
+          $('#authShowLnk').html('Click here to show login &raquo;');
+        }
+	});
+    
+    // change login button functions
+    $('#login_button_mr').click( function( event ) {
+      event.preventDefault();
+      $("#loginModal").modal("show");
+	});
     
     // Remove local password reset option - Shib transition
     $('#forgotpassword').remove();

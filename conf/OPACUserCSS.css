@@ -80,3 +80,27 @@ li#su-ut_id, td > input#email6, td > input#none6, td > input#email5, td > input#
 a.btn-link {
   background: none !important;
 }
+
+.modal {
+  border-radius: 0
+}
+
+#modalLoginLabel {
+  font-weight: bold;
+  color: #000
+}
+
+#modalAuth h1,
+#modalAuth h2,
+#modalAuth h3,
+#modalAuth h4{
+  color: #000
+}
+
+form#auth {
+  min-width: 1200px
+}
+
+div#opac-auth {
+  background-color: transparrent
+}
