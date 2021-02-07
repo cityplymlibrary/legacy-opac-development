@@ -1,0 +1,82 @@
+/*#opacheader {
+    background-color: #460f80cc;  
+
+}*/
+
+
+@import url('/custom/en/css/ptfs_custom_css.css');
+#illauthor > input, .ualwidth {
+    width: 250px;
+}
+
+.navbar .nav {
+  margin-top: 54px;
+}
+
+p.illfont {
+    font-size: 108%;
+    color: #333333;
+}
+#logo a {
+    Width:200px;
+}
+th.illth, td.illth {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#companyProfile {
+    margin: 10px 0 0 0;
+	padding: 10px 0;
+	Float:left;
+}
+#companyProfile p, #companyProfile a	{
+	Font-size:10px;
+	margin:0 0 5px;
+	line-height:100%;
+}
+#companyProfile img	{
+	margin-top:10px;
+}
+.black #opacmainuserblock .tabBox .tabContainer .search-opt td label {
+	color: #333333 !important;
+}
+#opac-main-search label {
+    display: unset;
+}
+@media only screen and (max-width:700px) {
+  #opac-main-search label {
+      display: block;
+  }
+}
+a.fullcart {
+    background-position: -5px -265px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.notforloan {
+    color: #00BF00;
+}
+#opaccredits	{
+	padding:30px 0 20px;
+}
+#pageFooter ul li	{
+	padding:10px 0;
+}
+@media only screen and (min-width:980px) and  (max-width:1199px)  {
+	#pageFooter ul li:last-child	{
+		Margin-right:0px;
+	}
+}
+.unavailable {
+    color: #707070;
+}
+#facet-holding-libraries, #holdingbranch_id {
+     display: none;
+}
+li#su-ut_id, td > input#email6, td > input#none6, td > input#email5, td > input#none5 {
+     display: none;
+}
+
+a.btn-link {
+  background: none !important;
+}
