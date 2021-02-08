@@ -3,6 +3,13 @@
 
 }*/
 
+a, a:link, a:visited {
+	color: #1f5678
+}
+
+a:hover, a:focus {
+	color: #000
+}
 
 @import url('/custom/en/css/ptfs_custom_css.css');
 #illauthor > input, .ualwidth {
