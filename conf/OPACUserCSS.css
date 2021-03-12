@@ -24,9 +24,15 @@ p.illfont {
     font-size: 108%;
     color: #333333;
 }
+
+#logo, #logo a{
+	cursor: pointer;
+}
+
 #logo a {
     Width:200px;
 }
+
 th.illth, td.illth {
     padding-left: 5px;
     padding-right: 5px;
