@@ -540,8 +540,7 @@ $(document).ready(function () {
     // Hide Analytics links
     $("span.label:contains('Analytics: ')").hide();
     $("a:contains('Show analytics')").hide();
-      
-    });
+
     
     // BS phrase search reformatter for Koha simple search 20190108
     $("[id^=searchsubmit]").click( function() {
@@ -584,4 +583,34 @@ $(document).ready(function () {
      return searchstr + "&do=Search&sort_by=relevance";
     }
     // end BS js
-    
+	
+	//
+	// test spa script
+	if(window.location.pathname == '/cgi-bin/koha/opac-main.pl') {
+		
+		// listen for changes in the url
+		spa_inject_payload();
+		window.addEventListener('popstate', function (event) {
+			spa_inject_payload();
+		});
+	}
+	
+	function spa_inject_payload() {
+		// vars
+		var id = window.location.hash.substring(3);
+		
+		if(id == 'test1') {
+			// set metadata
+			$(document).attr('title', 'City College Plymouth catalogue › Test page 1');
+			// now set the main body
+			$('#wrap').html('<h1>Test page 1<\/h1><p>This is test page 1 of 2. Use the links below to move about this SPA<\/p><hr \/><p><strong>Options:<\/strong> <a href=\"#!\/test1\">Goto test page 1<\/a> | <a href=\"#!\/test2\">Goto test page 2<\/a><\/p>');
+
+		} else if(id == 'test2') {
+			// set metadata
+			$(document).attr('title', 'City College Plymouth catalogue › Test page 1');
+			// now set the main body
+			$('#wrap').html('<h1>Test page 2<\/h1><p>This is test page 2 of 2. Use the links below to move about this SPA<\/p><hr \/><p><strong>Options:<\/strong> <a href=\"#!\/test1\">Goto test page 1<\/a> | <a href=\"#!\/test2\">Goto test page 2<\/a><\/p>');
+			
+		}
+	}
+});
