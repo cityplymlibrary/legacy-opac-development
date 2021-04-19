@@ -586,7 +586,7 @@ $(document).ready(function () {
 	
 	//
 	// test spa script
-	if(window.location.pathname == '/cgi-bin/koha/opac-main.pl') {
+	if(window.location.pathname == '/' || window.location.pathname == '/cgi-bin/koha/opac-main.pl') {
 		
 		// listen for changes in the url
 		spa_inject_payload();
