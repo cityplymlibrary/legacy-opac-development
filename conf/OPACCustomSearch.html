@@ -1,61 +1,54 @@
-    <div class="tabBox">
-      <div class="tabContainer2" id="opac-main-search">
-        <div id="tab12" class="tabContent2">
-          <!--Begin Search Catalogue Code -->
-          <form name="searchform1" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform1" class="form-inline">
-            <fieldset>
-            <!-- <label for="field_search1">
-              <span>Search Catalogue</span>
-            </label> -->
-          <br />
-          <input type="text" title="Type search term" class="transl1" id="field_search1" name="q" />
-          <span id="field_search_area"></span> 
-          <button type="submit" id="searchsubmit" class="btn btn-primary">Search</button>
-          <div class="search-opt">
-            <table style="width:100%;text-align:left">
-              <tr style="vertical-align:top;">
-                <td>
-                    
-                  <td>
-                    <p><strong>Select Format</strong></p>
-                    <div class="checkbox">
-                      <input type="radio" id="climit-ALL" name="limit" value="" title="Select Format"  checked="checked" /><label for="climit-ALL">All material</label>
-                    </div>
-                   
-                                        <div class="checkbox">
-                      <input type="radio" id="c_ccode_ebooks" name="limit"
-                      value="mc-ccode:MNGPH" /><label for="c_ccode_ebooks">Books </label>
-                    </div>
+<div class="tabBox">
+	<div class="tabContainer2" id="opac-main-search">
+		<div id="tab12" class="tabContent2">
+			<!--Begin Search Catalogue Code -->
+			<form name="searchform1" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform1" class="form-inline">
+				<fieldset>
+					<br />
+					<input type="text" title="Type search term" class="transl1" id="field_search1" name="q" />
+					<span id="field_search_area"></span>
+					<button type="submit" id="searchsubmit" class="btn btn-primary">Search</button>
+					<div class="search-opt">
+						<table style="width:100%;text-align:left">
+							<tr style="vertical-align:top;">
+								<td>
 
-                    <div class="checkbox">
-                      <input type="radio" id="c_ccode_cd" name="limit"
-                      value="mc-ccode:CDR" /><label for="c_ccode_cd">CD/CD-ROM </label>
-                    </div>
+								<td>
+									<p><strong>Select Format</strong></p>
+									<div class="checkbox">
+										<input type="radio" id="climit-ALL" name="limit" value="" title="Select Format" checked="checked" /><label for="climit-ALL">All material</label>
+									</div>
 
-                    <div class="checkbox">
-                      <input type="radio" id="c_ccode_dvd" name="limit"
-                      value="mc-ccode:DVD" /><label for="c_ccode_dvd">DVD/DVD-ROM </label>
-                    </div>
+									<div class="checkbox">
+										<input type="radio" id="c_ccode_ebooks" name="limit" value="mc-ccode:MNGPH" /><label for="c_ccode_ebooks">Books </label>
+									</div>
 
-                    <div class="checkbox">
-                      <input type="radio" id="c_ccode_serl" name="limit"
-                      value="mc-ccode:SERL" /><label for="c_ccode_serl">Journal </label>
-                    </div>
+									<div class="checkbox">
+										<input type="radio" id="c_ccode_cd" name="limit" value="mc-ccode:CDR" /><label for="c_ccode_cd">CD/CD-ROM </label>
+									</div>
 
-                     <div class="checkbox">
-                      <input type="radio" id="c_ccode_shmsic" name="limit"
-                      value="mc-ccode:SHMSIC" /><label for="c_ccode_shmsic">Sheet music </label>
-                    </div>
-             
-                    <div class="moreOptionsLink" style="width:inherit !important;">For more options select 
-                    <a href="/cgi-bin/koha/opac-search.pl">Advanced Search</a></div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </fieldset>
-          </form>
-          <!--End Search Widget Code-->
-        </div>
-    </div>
+									<div class="checkbox">
+										<input type="radio" id="c_ccode_dvd" name="limit" value="mc-ccode:DVD" /><label for="c_ccode_dvd">DVD/DVD-ROM </label>
+									</div>
+
+									<div class="checkbox">
+										<input type="radio" id="c_ccode_serl" name="limit" value="mc-ccode:SERL" /><label for="c_ccode_serl">Journal </label>
+									</div>
+
+									<div class="checkbox">
+										<input type="radio" id="c_ccode_shmsic" name="limit" value="mc-ccode:SHMSIC" /><label for="c_ccode_shmsic">Sheet music </label>
+									</div>
+
+									<div class="moreOptionsLink" style="width:inherit !important;">For more options select
+										<a href="/cgi-bin/koha/opac-search.pl">Advanced Search</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</fieldset>
+			</form>
+			<!--End Search Widget Code-->
+		</div>
+	</div>
 </div>
